@@ -1,3 +1,8 @@
+
+
+
+
+
 # Requirements
 1. [x] You must make a single page application (only one index.html file) using create-react-app.
 2. [] Your app should use at least 3 components in a way that keeps your code well organized.
@@ -6,6 +11,8 @@
     - Project Section: Showcase your projects by creating a component to display project cards. Each project card can include the project name, a brief description, technologies used, and a link to the project's GitHub repository or live demo. You can also include screenshots or images of your projects to make them visually appealing.
 3. [] There should be at least 2 client-side routes using React RouterLinks to an external site.. Be sure to include a nav bar or other UI element that allows users to navigate between routes. Use RESTful routing conventions where applicable.
 4. [] Use a json-server to create a RESTful API for your backend and make both a GET and a POST request to the json server. 
+    - GET Request: Fetching Blog Posts, Project Showcase, Retrieving User-Generated Comments. 
+    - POST Request: Users would enter their comment text and submit it, triggering a POST request to send the comment data to the server for storage and display.
 5. [] Use a form to make your post request, specifically a controlled form/component. 
 6. [] Additionally, you may choose to incorporate data from an external API but it is not required.
 7. [] For this project, you will need two separate repositories: one for your frontend and one for your backend.
@@ -22,41 +29,35 @@
 4. [] Anything else you'd like! These are only the basic requirements — you're free to explore and add on as much stuff as you'd like. 
 Setup
 
-# Frontend Setup
-Use create-react-app to generate starter code for your project. Follow the instructions on the create-react-appLinks to an external site. site to get started.
 
-# Backend Setup
-You can use this json-server templateLinks to an external site. to generate your backend code. Using this template will make it easier to deploy your backend later on.
+# MVP Diagram 
 
-If you prefer, instead of using the template, you can create a db.json file in the root of your project with a structure that looks like this:
+App (useState isDarkMode)
+├── Header ({ onDarkModeClick })
+├── About ({ img })
+└── ArticleList ({ articlePosts })
+    └── Article ({ title, date, preview, minutes, likes })
+        └── CommentsList ({ comments, onSubmitComment, onDeleteComment, onEditComment })
+        └── Comment ({ content, timeStamp, likes })
 
-{
-  "toys": [
-    {
-      "id": 1,
-      "name": "Woody",
-      "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 8
-    },
-    {
-      "id": 2,
-      "name": "Buzz Lightyear",
-      "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 14
-    }
-  ]
-}
-Then, assuming you have json-server installed globally, you can run this command to run the server:
+# Baby-the-Project Diagram
 
- json-server --watch db.json
-Whatever top-level keys exist in your db.json file will determine the routes available. In the example above, since we have a key of toys pointing to an array of toy objects, json-server will generate the following routes:
+App
+├── Header
+├── About
+└── ArticleList
+|    └── Article
+|        └── CommentsList
+|            └── Comment
+└── ProjectList
+|    └── Project
+|
+├── SkillsSection
+├── Footer
 
-GET /toys
-POST /toys
-GET /toys/:id
-PATCH /toys/:id
-DELETE /toys/:id
-You can consult the json-server docsLinks to an external site. for more information.
+
+
+
 
 # Deploying
 When your project is complete, you are encouraged to deploy it! You'll need to deploy your frontend and backend repos to their own standalone servers.
