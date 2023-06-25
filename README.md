@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# Requirements
+1. [x] You must make a single page application (only one index.html file) using create-react-app.
+2. [] Your app should use at least 3 components in a way that keeps your code well organized.
+    - Header: Create a header component that includes your name, logo, and a navigation menu to navigate between different sections of your page.
+    - Blog Section: Create a component to display your blog posts. Each blog post can include the title, an excerpt, publication date, and a link to the full blog post. Consider using cards or a grid layout to present your blog posts in an organized manner.
+    - Project Section: Showcase your projects by creating a component to display project cards. Each project card can include the project name, a brief description, technologies used, and a link to the project's GitHub repository or live demo. You can also include screenshots or images of your projects to make them visually appealing.
+3. [] There should be at least 2 client-side routes using React RouterLinks to an external site.. Be sure to include a nav bar or other UI element that allows users to navigate between routes. Use RESTful routing conventions where applicable.
+4. [] Use a json-server to create a RESTful API for your backend and make both a GET and a POST request to the json server. 
+5. [] Use a form to make your post request, specifically a controlled form/component. 
+6. [] Additionally, you may choose to incorporate data from an external API but it is not required.
+7. [] For this project, you will need two separate repositories: one for your frontend and one for your backend.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Stretch Goals
+1. [] Use more components and client-side routes.
+    - Hero Section: Add a hero section at the top of your page to introduce yourself as a full stack developer. You can include a catchy headline, a brief description, and a call-to-action button that leads to your portfolio or blog section.
+    - Skills Section: Highlight your skills as a full stack developer. You can use icons or badges to represent different technologies or programming languages that you're proficient in. Consider categorizing your skills into front-end, back-end, and database technologies.
+    - About Me Section: Create a component that provides a brief overview of your background, experience, and interests as a full stack developer. You can include a profile picture, a summary paragraph, and links to your social media profiles or resume.
+    - Contact Section: Add a contact form or contact information section where visitors can reach out to you for inquiries, collaborations, or job opportunities. Include fields for name, email, subject, and message.
+    - Footer: Create a footer component that includes links to your social media profiles, copyright information, and any additional navigation links.
+2. [] Add some styling: you're encouraged to write your CSS from scratch, either by using styled componentsLinks to an external site. or writing CSS files and using id/className to style your elements. You can also incorporate a UI framework (like React BootstrapLinks to an external site., Semantic UILinks to an external site., or Material UILinks to an external site.) if you prefer.
+3. [] Incorporate data from an external API. Check out this list of APIsLinks to an external site. if you need some inspiration!
+4. [] Anything else you'd like! These are only the basic requirements — you're free to explore and add on as much stuff as you'd like. 
+Setup
 
-## Available Scripts
+# Frontend Setup
+Use create-react-app to generate starter code for your project. Follow the instructions on the create-react-appLinks to an external site. site to get started.
 
-In the project directory, you can run:
+# Backend Setup
+You can use this json-server templateLinks to an external site. to generate your backend code. Using this template will make it easier to deploy your backend later on.
 
-### `npm start`
+If you prefer, instead of using the template, you can create a db.json file in the root of your project with a structure that looks like this:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+{
+  "toys": [
+    {
+      "id": 1,
+      "name": "Woody",
+      "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
+      "likes": 8
+    },
+    {
+      "id": 2,
+      "name": "Buzz Lightyear",
+      "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
+      "likes": 14
+    }
+  ]
+}
+Then, assuming you have json-server installed globally, you can run this command to run the server:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ json-server --watch db.json
+Whatever top-level keys exist in your db.json file will determine the routes available. In the example above, since we have a key of toys pointing to an array of toy objects, json-server will generate the following routes:
 
-### `npm test`
+GET /toys
+POST /toys
+GET /toys/:id
+PATCH /toys/:id
+DELETE /toys/:id
+You can consult the json-server docsLinks to an external site. for more information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Deploying
+When your project is complete, you are encouraged to deploy it! You'll need to deploy your frontend and backend repos to their own standalone servers.
 
-### `npm run build`
+For your backend, if you are using json-server, you will need a service capable of running a Node.js server. We recommend using RenderLinks to an external site.. See the json-server templateLinks to an external site. for instructions on deploying your backend to Render.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For your frontend, we recommend using NetlifyLinks to an external site.; however, there are a number of free services you can use if you'd like to explore alternatives.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Deploying Tips & Tricks
+Routing
+If you're using React Router, you'll also need to set up a _redirects file as specified here:
 
-### `npm run eject`
+Netlify RedirectsLinks to an external site.
+Your redirects file should be placed in the public folder. It looks like this:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+/*    /index.html   200
+Environment Variables
+When working on your app, it's useful to consider which environment you're working on:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Development: when working locally
+Test: when running tests
+Production: when deployed to server
+You'll likely have some variables that change depending on what environment you're working in. For example, after deploying your site to production, you won't be able to access your backend on localhost anymore.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To handle these kinds of environment variables, we can use .env files.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+create-react-app has some tools for working with .env files that you can read about here:
 
-## Learn More
+Custom Environment VariablesLinks to an external site.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can make a .env.development and .env.production file to keep track of separate environment variables. Note that these files should be in the root of your application directory (not in /src). For example, you might set up a .env.development file with your local development server URL:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+REACT_APP_API_URL=http://localhost:4000
+And a .env.production file with your deployed backend URL:
 
-### Code Splitting
+REACT_APP_API_URL=https://my-awesome-project.onrender.com
+To use these environment variables in your code, you can access them at process.env.REACT_APP_VARIABLE_NAME:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+fetch(`${process.env.REACT_APP_API_URL}/cats`)
+  .then((r) => r.json())
+  .then(setCats);
+What Happens When I Deploy?
+Glad you asked! Deploying your site involves taking the code that lives on your machine, and setting it up to run on someone else's machine.
 
-### Analyzing the Bundle Size
+As you'll recall, our frontend applications are a type of app known as a Single Page Application. What that means is that there is only one HTML file, along with a handful of JavaScript, CSS, fonts, images, and other static assets. So when our site is deployed, the main thing we need is a server to host all of those files and let other people from around the world access those files with their browsers.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+static file server
 
-### Making a Progressive Web App
+In order to generate those files, create-react-app comes with a special build script that uses another tool, webpack, to take all of our JavaScript, CSS, and other assets from the src directory and optimize them by bundling (merging files together) and minifying (shortening the lines of code) so that the files load as fast as possible.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+webpack bundle
 
-### Advanced Configuration
+You can try this out on your own by running npm run build. This will create a new directory with your bundled and minified source code!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+When you upload your project to Netlify, this build script will run automatically on Netlify's server, so that they can host the content for you. Any time you update your code and push the changes up to Netlify, the build script will run again and create a new bundle on the server.
 
-### Deployment
+Netlify can be configured to use Continuous Deployment, which typically works by connecting your Git repository with Netlify's build process. Then, any time you push up changes to your main branch, your deployed site will automatically update! This makes it very easy to add features even after you've deployed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+How do you feel about this lesson?
+Thumbs up!Thumbs down!
+Have specific feedback?
+Tell us here!
