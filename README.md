@@ -7,8 +7,8 @@
 1. [x] You must make a single page application (only one index.html file) using create-react-app.
 2. [] Your app should use at least 3 components in a way that keeps your code well organized.
     - Header: Create a header component that includes your name, logo, and a navigation menu to navigate between different sections of your page.
-    - Blog Section: Create a component to display your blog posts. Each blog post can include the title, an excerpt, publication date, and a link to the full blog post. Consider using cards or a grid layout to present your blog posts in an organized manner.
-    - Project Section: Showcase your projects by creating a component to display project cards. Each project card can include the project name, a brief description, technologies used, and a link to the project's GitHub repository or live demo. You can also include screenshots or images of your projects to make them visually appealing.
+    - About:  
+    - ArticleList: 
 3. [] There should be at least 2 client-side routes using React RouterLinks to an external site.. Be sure to include a nav bar or other UI element that allows users to navigate between routes. Use RESTful routing conventions where applicable.
 4. [] Use a json-server to create a RESTful API for your backend and make both a GET and a POST request to the json server. 
     - GET Request: Fetching Blog Posts, Project Showcase, Retrieving User-Generated Comments. 
