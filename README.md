@@ -42,13 +42,13 @@ App (useState isDarkMode)
 
 # Baby-the-Project Diagram
 
-App
-├── Header
-├── About
-└── ArticleList
-|    └── Article
-|        └── CommentsList
-|            └── Comment
+App (useState isDarkMode)
+├── Header ({ onDarkModeClick })
+├── About ({ img })
+└── ArticleList ({ articlePosts })
+|    └── Article ({ title, date, preview, minutes, likes })
+|        └── CommentsList ({ comments, onSubmitComment, onDeleteComment, onEditComment })
+|        └── Comment ({ content, timeStamp, likes })
 └── ProjectList
 |    └── Project
 |
@@ -56,6 +56,7 @@ App
 ├── Footer
 
 
+# Setting up Backend
 
 
 
