@@ -17,7 +17,7 @@
 5. [] Use a form to make your post request, specifically a controlled form/component. 
 6. [] Additionally, you may choose to incorporate data from an external API but it is not required.
 7. [] For this project, you will need two separate repositories: one for your frontend and one for your backend.
-8. [10/30] At least 30 total commits.  
+8. [11/30] At least 30 total commits.  
 
 # Stretch Goals
 1. [] Use more components and client-side routes.

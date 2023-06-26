@@ -4,7 +4,7 @@ import React from "react";
 function Header() {
     return (
         <header>
-        <h1>My Blog</h1>
+        <h1>Header Component</h1>
         {/* <button onClick={onDarkModeClick}>Dark Mode</button> */}
         </header>
     );

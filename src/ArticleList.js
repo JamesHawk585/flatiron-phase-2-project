@@ -11,7 +11,9 @@ function ArticleList({ posts }) {
         />
     ));
     
-    return <main>{articleList}</main>;
+    return (
+    <h1>ArticleList Component</h1>
+    );
 }
 
 export default ArticleList;
