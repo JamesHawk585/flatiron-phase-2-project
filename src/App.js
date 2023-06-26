@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import NavBar from './NavBar';
+import About from './About';
+import Header from './Header';
+import ArticleList from './ArticleList';
+import posts from '../data/posts';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = React.useState(false);
+
+  const onDarkModeClcik = () => {
+    setIsDarkMode(isDarkMode => !isDarkMode);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={"App " + (isDarkMode ? "dark" : "light" )}>
+      <h1>App</h1>
+      <Header toggleDarkMode={onDarkModeClcik}/>
+      <NavBar />
+      <About />
+      <ArticleList />
     </div>
   );
-}
+}}
 
 export default App;

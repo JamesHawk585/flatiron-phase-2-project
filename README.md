@@ -5,11 +5,14 @@
 
 # Requirements
 1. [x] You must make a single page application (only one index.html file) using create-react-app.
-2. [] Your app should use at least 3 components in a way that keeps your code well organized.
+2. [0/5] Your app should use at least 3 components in a way that keeps your code well organized.
     - Header: Create a header component that includes your name, logo, and a navigation menu to navigate between different sections of your page.
     - About:  
     - ArticleList: 
-3. [] There should be at least 2 client-side routes using React RouterLinks to an external site.. Be sure to include a nav bar or other UI element that allows users to navigate between routes. Use RESTful routing conventions where applicable.
+    - Article
+    - CommentList
+    - Comment
+3. [0/2] There should be at least 2 client-side routes using React RouterLinks to an external site.. Be sure to include a nav bar or other UI element that allows users to navigate between routes. Use RESTful routing conventions where applicable.
 4. [] Use a json-server to create a RESTful API for your backend and make both a GET and a POST request to the json server. 
     - GET Request: Fetching Blog Posts, Project Showcase, Retrieving User-Generated Comments. 
     - POST Request: Users would enter their comment text and submit it, triggering a POST request to send the comment data to the server for storage and display.
@@ -33,6 +36,7 @@ Setup
 # MVP Diagram 
 
 App (useState isDarkMode)
+├── NavBar
 ├── Header ({ onDarkModeClick })
 ├── About ({ img })
 └── ArticleList ({ articlePosts })
