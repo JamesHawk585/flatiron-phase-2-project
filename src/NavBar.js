@@ -3,8 +3,9 @@ import React from "react";
 function NavBar({ onChangePage }) {
   return (
     <nav>
-      <button onClick={() => onChangePage("Form")}>Blog Posts</button>
-      <button onClick={() => onChangePage("List")}>Projects</button>
+      <button onClick={() => onChangePage("About")}>About</button>
+      <button onClick={() => onChangePage("Form")}>Projects</button>
+      <button onClick={() => onChangePage("List")}>Blog Posts</button>
     </nav>
   );
 }

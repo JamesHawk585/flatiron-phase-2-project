@@ -6,7 +6,7 @@ import ArticleList from './ArticleList';
 // import posts from '../data/posts';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  // const [isDarkMode, setIsDarkMode] = useState(false);
   const [posts, setPosts] = useState([]);
   const [page, setPage] = useState("Home");
 
@@ -21,10 +21,11 @@ function App() {
 
 
   return (
-    <div className={"App " + (isDarkMode ? "dark" : "light" )}>
-      <h1>App</h1>
+    // <div className={"App " + (isDarkMode ? "dark" : "light" )}>
+    <div className="App">
+      <h1>My Website</h1>
       {/* <Header toggleDarkMode={onDarkModeClick}/> */}
-      {/* <Header/> */}
+      <Header/>
       <NavBar onChangePage={setPage}/>
       {page === "Home" ? <About /> : <ArticleList posts={posts}/> }
     </div>
