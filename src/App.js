@@ -13,11 +13,10 @@ function App() {
       .then(response => response.json())
       .then(data => setPosts(data));
   }, []);
-
+console.log(posts)
 
   return (
     <div className="App">
-      <h1>App Component</h1>
       {/* <Header toggleDarkMode={onDarkModeClick}/> */}
       <Header/>
       <NavBar onChangePage={setPage}/>

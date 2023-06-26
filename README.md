@@ -3,11 +3,12 @@
 
 # Requirements
 1. [x] You must make a single page application (only one index.html file) using create-react-app.
-2. [0/5] Your app should use at least 3 components in a way that keeps your code well organized.
+2. [4/5] Your app should use at least 3 components in a way that keeps your code well organized.
     - Header: Create a header component that includes your name, logo, and a navigation menu to navigate between different sections of your page.
-    - About:  
-    - ArticleList: 
-    - Article
+    + About 
+    + Header 
+    + ArticleList: 
+    + Article
     - CommentList
     - Comment
 3. [0/2] There should be at least 2 client-side routes using React RouterLinks to an external site.. Be sure to include a nav bar or other UI element that allows users to navigate between routes. Use RESTful routing conventions where applicable.
@@ -17,7 +18,7 @@
 5. [] Use a form to make your post request, specifically a controlled form/component. 
 6. [] Additionally, you may choose to incorporate data from an external API but it is not required.
 7. [] For this project, you will need two separate repositories: one for your frontend and one for your backend.
-8. [11/30] At least 30 total commits.  
+8. [12/30] At least 30 total commits.  
 
 # Stretch Goals
 1. [] Use more components and client-side routes.
