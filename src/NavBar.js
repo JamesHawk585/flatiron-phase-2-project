@@ -1,12 +1,12 @@
-// import React from "react";
+import React from "react";
 
-// function AdminNavBar({ onChangePage }) {
-//   return (
-//     <nav>
-//       <button onClick={() => onChangePage("Form")}>New Question</button>
-//       <button onClick={() => onChangePage("List")}>View Questions</button>
-//     </nav>
-//   );
-// }
+function NavBar({ onChangePage }) {
+  return (
+    <nav>
+      <button onClick={() => onChangePage("Form")}>Blog Posts</button>
+      <button onClick={() => onChangePage("List")}>Projects</button>
+    </nav>
+  );
+}
 
-// export default AdminNavBar;
+export default NavBar;
