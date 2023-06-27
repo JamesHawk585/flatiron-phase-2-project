@@ -129,8 +129,9 @@ Have specific feedback?
 Tell us here!
 
 Instructor Questions
-1. When I console.log() posts, I get an empty array. Why is that?
-2. I am lost on settign up my backend. I am currently trying to fetch backend data from db.json. How should my backend be structrued. 
-3. How can I submit a second repo for my back end? 
-4. Do you forsee any challenges with the CommentList or comments components?  
-5. I was considering incorporating the GitHub API to showcase my Phase-1 project. Do you have any guidance on how to do that?  
+1. [x] When I console.log() posts, I get an empty array. Why is that?
+2. [] I am lost on setting up my backend. I am currently trying to fetch backend data from db.json. How should my backend be structrued. 
+3. [x] How can I submit a second repo for my back end? 
+4. [x] Do you forsee any challenges with the CommentList or comments components?  
+5. [x] I was considering incorporating the GitHub API to showcase my Phase-1 project. Do you have any guidance on how to do that?  
+6. [] How can I fix my dark mode? 

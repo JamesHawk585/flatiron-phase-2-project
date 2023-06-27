@@ -19,9 +19,8 @@ function App() {
     fetch('http://localhost:3000/posts')
       .then(response => response.json())
       // .then(posts => setPosts(posts));
-      .then(posts => {setPosts(posts);console.log(posts)});
+      .then(posts => {setPosts(posts)});
   }, []);
-console.log(posts)
 
   return (
     <div className={"App " + (darkMode ? "dark" : "light")}>
