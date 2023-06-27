@@ -18,7 +18,7 @@
 5. [] Use a form to make your post request, specifically a controlled form/component. 
 6. [] Additionally, you may choose to incorporate data from an external API but it is not required.
 7. [] For this project, you will need two separate repositories: one for your frontend and one for your backend.
-8. [12/30] At least 30 total commits.  
+8. [13/30] At least 30 total commits.  
 
 # Stretch Goals
 1. [] Use more components and client-side routes.
@@ -127,3 +127,10 @@ How do you feel about this lesson?
 Thumbs up!Thumbs down!
 Have specific feedback?
 Tell us here!
+
+Instructor Questions
+1. When I console.log() posts, I get an empty array. Why is that?
+2. I am lost on settign up my backend. I am currently trying to fetch backend data from db.json. How shoulkd my backend be structrued. 
+3. How can I submit a secoind repo for my back end? 
+4. Do you forsee any challenges with the CommentList or comments components? 
+5. Would it be wise to replace the About section with something else? 

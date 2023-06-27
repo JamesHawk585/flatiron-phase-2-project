@@ -3,7 +3,6 @@ import Article from './Article';
 
 function ArticleList({ posts }) {
     const articleList = posts.map(post => (
-    
         <Article
         key={post.id}
         title={post.title}

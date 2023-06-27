@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
-import About from './About';
+import ProjectList from './ProjectList';
 import Header from './Header';
 import ArticleList from './ArticleList';
 
@@ -15,12 +15,14 @@ function App() {
   }, []);
 console.log(posts)
 
+// When I console.log() posts, I get an empty array. Why is that?
+
   return (
     <div className="App">
       {/* <Header toggleDarkMode={onDarkModeClick}/> */}
       <Header/>
       <NavBar onChangePage={setPage}/>
-      {page === "About" ? <About /> : <ArticleList posts={posts}/>}
+      {page === "ProjectList" ? <ProjectList /> : <ArticleList posts={posts}/>}
     </div>
   );
 }
