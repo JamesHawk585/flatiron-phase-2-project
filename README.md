@@ -14,11 +14,45 @@
 3. [0/2] There should be at least 2 client-side routes using React RouterLinks to an external site.. Be sure to include a nav bar or other UI element that allows users to navigate between routes. Use RESTful routing conventions where applicable.
 4. [] Use a json-server to create a RESTful API for your backend and make both a GET and a POST request to the json server. 
     + GET Request: Fetching Blog Posts 
-    - POST Request: Users would enter their comment text and submit it, triggering a POST request to send the comment data to the server for storage and display.
-5. [] Use a form to make your post request, specifically a controlled form/component. 
+
+
+
+    + POST Request: Users would enter their comment text and submit it, triggering a POST request to send the comment data to the server for storage and display.
+
+
+
+5. [x] Use a form to make your post request, specifically a controlled form/component. 
 6. [] Additionally, you may choose to incorporate data from an external API but it is not required.
 7. [] For this project, you will need two separate repositories: one for your frontend and one for your backend.
-8. [14/30] At least 30 total commits.  
+8. [17/30] At least 30 total commits.  
+
+
+ToDo List: 
+1. [] Append new blog post to the dom. 
+2. [] Add functionality to delete blog post. 
+3. [] reseacrh Environmental Variables. .git ignore. 
+    .env files. 
+4. [] Esnure Restful Routing is being used. 
+5. [] React Router 
+
+-------------------------------------------------------------------------
+6. [] MVP Complete
+-------------------------------------------------------------------------
+
+7. [] Submit backend repo
+8. [] darkMode
+9. [] CSS
+10. [] README Quick Start
+    - http://www.github.com/expressjs/express 
+11. [] Test in new file 
+12. [] Deploy? 
+    - If you're using React Router, you'll also need to set up a _redirects file.
+    - Include link to deployed app in README. 
+    - Add a .env.production file with your deployed backend URL.
+13. [] Front End Repo
+14. [] Back End Repo
+15. [] Blog 
+
 
 # Stretch Goals
 1. [] Use more components and client-side routes.
