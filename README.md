@@ -13,7 +13,7 @@
     - Comment
 3. [0/2] There should be at least 2 client-side routes using React RouterLinks to an external site.. Be sure to include a nav bar or other UI element that allows users to navigate between routes. Use RESTful routing conventions where applicable.
 4. [] Use a json-server to create a RESTful API for your backend and make both a GET and a POST request to the json server. 
-    - GET Request: Fetching Blog Posts, Project Showcase, Retrieving User-Generated Comments. 
+    + GET Request: Fetching Blog Posts 
     - POST Request: Users would enter their comment text and submit it, triggering a POST request to send the comment data to the server for storage and display.
 5. [] Use a form to make your post request, specifically a controlled form/component. 
 6. [] Additionally, you may choose to incorporate data from an external API but it is not required.
