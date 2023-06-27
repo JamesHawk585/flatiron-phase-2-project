@@ -1,5 +1,6 @@
 import React from 'react';
 import Article from './Article';
+import Card from 'react-bootstrap/Card';
 
 function ArticleList({ posts }) {
     const articleList = posts.map(post => (
@@ -12,8 +13,12 @@ function ArticleList({ posts }) {
     ));
     console.log(posts)
     return (
-    <h1>ArticleList Component</h1>
-    );
-}
+        <Card>
+            <Card.Body>ArticleList Component</Card.Body>
+        </Card>
+    // return (
+    // <h1>ArticleList Component</h1>
+    // );
+)};
 
 export default ArticleList;
