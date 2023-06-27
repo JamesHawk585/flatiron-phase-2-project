@@ -7,7 +7,8 @@ import ArticleList from './ArticleList';
 
 function App() {
   const [posts, setPosts] = useState([]);
-  const [page, setPage] = useState("Home");
+  // const [page, setPage] = useState("Home");
+  const [page, setPage] = useState("/");
   const [darkMode, setDarkMode] = useState(false);
 
   function onDarkModeClick() {

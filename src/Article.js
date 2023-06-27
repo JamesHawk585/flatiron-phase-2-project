@@ -1,24 +1,36 @@
-import React from "react";
+// import React from "react";
 
-// function Article({ title, date = "January 1, 1970", preview }) {
+//     function Article({ props }) {
+//     const onHandleDelete = () => {
+//         onHandleDelete(id);
+//     }
 //     return (
 //         <article>
-//             <h3>{title}</h3>
-//             <small>{date}</small>
-//             <p>{preview}</p>
+//             <h3>{props.title}</h3>
+//             <small>{props.date}</small>
+//             <p>{props.preview}</p>
+//             <button onClick={onHandleDelete}>Delete</button>
 //         </article>
 //     );
 // }
 
-function Article(props) {
-    return (
-        <article>
-            <h1>Artical Component </h1>
-            <h3>{props.title}</h3>
-            <small>{props.date}</small>
-            <p>{props.preview}</p>
-        </article>
-    );
+// export default Article;
+
+import React from "react";
+
+function Article({ title, date = "January 1, 1970", preview, handleDelete }) {
+  const handleDeleteClick = () => {
+    handleDelete(title);
+  };
+
+  return (
+    <article>
+      <h3>{title}</h3>
+      <small>{date}</small>
+      <p>{preview}</p>
+      <button onClick={handleDeleteClick}>Delete</button>
+    </article>
+  );
 }
 
 export default Article;
