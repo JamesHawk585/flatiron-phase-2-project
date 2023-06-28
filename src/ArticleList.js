@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Article from './Article';
 
+
 function ArticleList({ posts }) {
   const [newArticle, setNewArticle] = useState({
     title: '',
@@ -46,24 +47,24 @@ function ArticleList({ posts }) {
 // ------------------------------------------------------------
 
   
-const handleDeleteArticle = (title) => {
-    fetch(`http://localhost:3000/posts/${title}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((response) => {
-        return response.json(); // Convert the response to JSON
-      })
-      .then((data) => {
-        // Handle the response data if needed
-      })
-      .catch((error) => {
-        // Handle any errors that occur during the request
-        console.error('Error deleting article:', error);
-      });
-  };
+// const handleDeleteArticle = (title) => {
+//     fetch(`http://localhost:3000/posts/${title}`, {
+//       method: 'DELETE',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//     })
+//       .then((response) => {
+//         return response.json(); // Convert the response to JSON
+//       })
+//       .then((data) => {
+//         // Handle the response data if needed
+//       })
+//       .catch((error) => {
+//         // Handle any errors that occur during the request
+//         console.error('Error deleting article:', error);
+//       });
+//   };
   
 
 
@@ -100,7 +101,7 @@ const handleDeleteArticle = (title) => {
           title={post.title}
           date={post.date}
           preview={post.preview}
-          handleDelete={handleDeleteArticle}
+        //   handleDelete={handleDeleteArticle}
         />
       ))}
     </main>
