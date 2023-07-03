@@ -3,16 +3,15 @@
 
 # Requirements
 1. [x] You must make a single page application (only one index.html file) using create-react-app.
-2. [4/3] Your app should use at least 3 components in a way that keeps your code well organized.
+2. [5/3] Your app should use at least 3 components in a way that keeps your code well organized.
     - Header: Create a header component that includes your name, logo, and a navigation menu to navigate between different sections of your page.
     + ProjectList 
     + Header 
     + ArticleList: 
     + Article
-    - CommentList
-    - Comment
-3. [0/2] There should be at least 2 client-side routes using React RouterLinks to an external site.. Be sure to include a nav bar or other UI element that allows users to navigate between routes. 
-4. [] Use RESTful routing conventions where applicable.
+    - About
+3. [5/2] There should be at least 2 client-side routes using React RouterLinks. Be sure to include a nav bar or other UI element that allows users to navigate between routes. 
+4. [x] Use RESTful routing conventions where applicable.
 5. [x] Use a json-server to create a RESTful API for your backend and make both a GET and a POST request to the json server. 
     + GET Request: Fetching Blog Posts 
     + POST Request: Adds new posts to db.json and appends to the DOM. 
@@ -20,21 +19,21 @@
 
 6. [x] Use a form to make your post request, specifically a controlled form/component. 
 7. [] For this project, you will need two separate repositories: one for your frontend and one for your backend.
-8. [17/30] At least 30 total commits.  
+8. [22/30] At least 30 total commits.  
 
 
 ToDo List: 
 1. [x] Append new blog post to the dom. 
-2. [] Add functionality to delete blog post. 
-3. [] reseacrh Environmental Variables. .git ignore. 
+3. [] research Environmental Variables. .git ignore. 
     .env files. 
-4. [] Esnure Restful Routing is being used. 
-5. [] React Router 
+4. [x] Esnure Restful Routing is being used. 
+5. [x] React Router 
 
 -------------------------------------------------------------------------
 6. [] MVP Complete
 -------------------------------------------------------------------------
 
+7. [] Add functionality to delete blog post. 
 7. [] Submit backend repo
 8. [] darkMode
 9. [] CSS
@@ -160,8 +159,12 @@ Tell us here!
 
 Instructor Questions
 1. [x] When I console.log() posts, I get an empty array. Why is that?
-2. [] I am lost on setting up my backend. I am currently trying to fetch backend data from db.json. How should my backend be structrued. 
-3. [x] How can I submit a second repo for my back end? 
-4. [x] Do you forsee any challenges with the CommentList or comments components?  
-5. [x] I was considering incorporating the GitHub API to showcase my Phase-1 project. Do you have any guidance on how to do that?  
+2. [] Why do I need to refresh the page to append the article that was just POSTed to db.json?
+3. [] Why does my site default to the last compnent viewed, rather than:    
+
+// App.js
+<Route exact path="/">
+    <Home/>
+</Route>
+
 6. [] How can I fix my dark mode? 

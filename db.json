@@ -6,7 +6,8 @@
       "date": "December 15, 2020",
       "preview": "Setting up the building blocks of your site",
       "minutes": 5,
-      "comments": 2
+      "comments": 2,
+      "likes": 0
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "date": "December 11, 2020",
       "preview": "Passing props is never passé",
       "minutes": 15,
-      "comments": 0
+      "comments": 0,
+      "likes": 0
     },
     {
       "id": 3,
@@ -22,43 +24,20 @@
       "date": "December 11, 2020",
       "preview": "React,meet OOJS",
       "minutes": 47,
-      "comments": 0
+      "comments": 0,
+      "likes": 0
     },
     {
-      "title": "Test Article ",
+      "title": "test ",
       "date": "6/28/2023",
       "preview": "test preview",
       "id": 4
     },
     {
-      "title": "Test Article 2",
-      "date": "6/28/2023",
-      "preview": "Test 2",
-      "id": 5
-    },
-    {
-      "title": "Test Article 3",
-      "date": "6/28/2023",
-      "preview": "Test 3",
-      "id": 6
-    },
-    {
       "title": "",
       "date": "",
       "preview": "",
-      "id": 7
-    },
-    {
-      "title": "Test Article 4",
-      "date": "6/28/2023",
-      "preview": "Test 4",
-      "id": 8
-    },
-    {
-      "title": "Test 5 ",
-      "date": "6/28/2023",
-      "preview": "test preview",
-      "id": 9
+      "id": 5
     }
   ]
 }
