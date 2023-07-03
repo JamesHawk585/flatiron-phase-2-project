@@ -17,18 +17,16 @@
 
 6. [x] Use a form to make your post request, specifically a controlled form/component. 
 7. [] For this project, you will need two separate repositories: one for your frontend and one for your backend.
-8. [29/30] At least 30 total commits.  
+8. [30/30] At least 30 total commits.  
 
 
 ToDo List: 
 1. [x] Append new blog post to the dom. 
-3. [] research Environmental Variables. .git ignore. 
-    .env files. 
-4. [x] Esnure Restful Routing is being used. 
-5. [x] React Router 
+2. [x] Esnure Restful Routing is being used. 
+3. [x] React Router 
 
 -------------------------------------------------------------------------
-6. [] MVP Complete
+6. [x] MVP Complete
 -------------------------------------------------------------------------
 
 7. [] Add functionality to delete blog post. 
