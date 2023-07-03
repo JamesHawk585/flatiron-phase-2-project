@@ -5,7 +5,6 @@ function Header({ onDarkModeClick }) {
     return (
         <header div="header">
         <h1>Hawk's Project Perch</h1>
-        <button onClick={onDarkModeClick}>Dark Mode</button>
         </header>
     );
 }

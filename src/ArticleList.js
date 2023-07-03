@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Article from './Article';
 
 
-function ArticleList({ posts }) {
+function ArticleList({ posts, addNewPost }) {
   const [newArticle, setNewArticle] = useState({
     title: '',
     date: '',
@@ -29,6 +29,12 @@ function ArticleList({ posts }) {
     })
       .then((response) => response.json())
       .then((createdPost) => {
+
+        // ------------------------------------------------------------ 
+    // addNewPost(createdPost);
+
+
+        // ------------------------------------------------------------
         // Handle the response if needed
         console.log('New article created:', createdPost);
 
@@ -44,31 +50,7 @@ function ArticleList({ posts }) {
         console.error('Error creating article:', error);
       });
   };
-// ------------------------------------------------------------
 
-  
-// const handleDeleteArticle = (title) => {
-//     fetch(`http://localhost:3000/posts/${title}`, {
-//       method: 'DELETE',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//     })
-//       .then((response) => {
-//         return response.json(); // Convert the response to JSON
-//       })
-//       .then((data) => {
-//         // Handle the response data if needed
-//       })
-//       .catch((error) => {
-//         // Handle any errors that occur during the request
-//         console.error('Error deleting article:', error);
-//       });
-//   };
-  
-
-
-// ------------------------------------------------------------
   return (
     <main>
       <form onSubmit={handleSubmit}>

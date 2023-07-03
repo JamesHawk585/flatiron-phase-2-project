@@ -5,6 +5,7 @@ import Header from './Header';
 import ArticleList from './ArticleList';
 import { Switch, Route } from "react-router-dom";
 import Home from './Home';
+import './App.css';
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -20,19 +21,14 @@ function App() {
     fetch('http://localhost:3000/posts')
       .then(response => response.json())
       .then(posts => {setPosts(posts)});
+      console.log(posts);
   }, []);
 
-  // return (
-  //   <div className={"App " + (darkMode ? "dark" : "light")}>
-  //     <Header onDarkModeClick={onDarkModeClick}/>
-  //     <NavBar onChangePage={setPage}/>
-  //     {page === "ProjectList" ? <ProjectList /> : <ArticleList posts={posts}/>}
-  //   </div>
-  // );
 
   return (
     <Route>
-      <div className={"App " + (darkMode ? "dark" : "light")}>
+
+      <div className="main-content">
         <Header onDarkModeClick={onDarkModeClick}/>
         <NavBar onChangePage={setPage}/>
         <Switch>
@@ -56,7 +52,7 @@ function App() {
     </Route>
 
 
-  )
+  );
 
 
 }
