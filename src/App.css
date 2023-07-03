@@ -1,18 +1,7 @@
-/* .App {
-  text-align: center;
-} */
-
 .App-link {
   color: #61dafb;
 }
 
-
-.App.dark {
-  --font-color: rgb(255, 255, 255);
-  --background: rgb(50, 50, 50);
-  --background--light: rgb(80, 80, 80);
-  transition: all 0.3s;
-}
 
 .App {
   margin: 2rem auto;
@@ -67,9 +56,9 @@ Main content styles
   transition: background-color 0.3s ease;
 }
 
-.button:hover {
+/* .button:hover {
   background-color: #0056b3;
-}
+} */
 
 footer {
   background-color: #f5f5f5;
